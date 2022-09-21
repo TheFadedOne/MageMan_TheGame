@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Floor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 887505333
+    locked: 0
+  - name: Stars
+    uniqueID: 2422037323
+    locked: 0
+  - name: Background
+    uniqueID: 282693947
+    locked: 0
+  - name: Floor
+    uniqueID: 3951642513
+    locked: 0
+  - name: Player
+    uniqueID: 886391071
+    locked: 0
+  - name: Foreground
+    uniqueID: 373998019
+    locked: 0
