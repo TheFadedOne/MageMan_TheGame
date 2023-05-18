@@ -15,6 +15,6 @@ public class HUDFollowCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = camera.transform.position;
+        transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, 0);
     }
 }

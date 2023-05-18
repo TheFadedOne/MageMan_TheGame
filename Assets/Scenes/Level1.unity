@@ -1123,7 +1123,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13.043415
+  orthographic size: 18.578053
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -23862,7 +23862,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806931366}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &840022816
 GameObject:
   m_ObjectHideFlags: 0
@@ -24274,7 +24274,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965590508}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &1015248829
 GameObject:
   m_ObjectHideFlags: 0
@@ -24387,6 +24387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033744208}
   - component: {fileID: 1033744209}
+  - component: {fileID: 1033744210}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -24413,7 +24414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5.13, y: -2.6}
+  m_AnchoredPosition: {x: 5.130005, y: -2.5999756}
   m_SizeDelta: {x: 490.22998, y: 77.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033744209
@@ -24455,7 +24456,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1532453635}
   m_HandleRect: {fileID: 0}
@@ -24467,6 +24468,49 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1033744210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033744207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d998eb943ca0b234cafb7e9ca3cf196a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1033744209}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.08050716, b: 0, a: 1}
+    key1: {r: 0.9837489, g: 1, b: 0, a: 1}
+    key2: {r: 0.8169507, g: 1, b: 0, a: 0}
+    key3: {r: 0.05724919, g: 1, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 7517
+    ctime1: 22552
+    ctime2: 30840
+    ctime3: 58211
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  fill: {fileID: 1532453636}
 --- !u!1 &1051218155
 GameObject:
   m_ObjectHideFlags: 0
@@ -25244,8 +25288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 301.3637, y: 290.23627}
-  m_SizeDelta: {x: 34.9212, y: 19.8721}
+  m_AnchoredPosition: {x: 301.3882, y: 290.292}
+  m_SizeDelta: {x: 49.4542, y: 27.8201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130012100
 MonoBehaviour:
@@ -26511,8 +26555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.329956, y: -2.9100037}
-  m_SizeDelta: {x: 4.66, y: 5.83}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532453636
 MonoBehaviour:
@@ -26671,7 +26715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.5, y: -2.6}
+  m_AnchoredPosition: {x: -2.5, y: -2.5999756}
   m_SizeDelta: {x: 24.5065, y: 22.7547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718900144
@@ -26718,13 +26762,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1033744210}
+        m_TargetAssemblyTypeName: UpdateHP, Assembly-CSharp
+        m_MethodName: setHealth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27323,9 +27367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d33893ac2724334693eec741bae5a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 100
   currentHealth: 100
-  healthBar: {fileID: 1033744209}
+  healthBar: {fileID: 1033744210}
 --- !u!1 &1931246197
 GameObject:
   m_ObjectHideFlags: 0

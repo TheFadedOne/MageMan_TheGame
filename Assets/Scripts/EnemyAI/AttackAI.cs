@@ -7,6 +7,7 @@ public class AttackAI : MonoBehaviour
     [SerializeField] GameObject attackTarget;
     [SerializeField] LayerMask layer;
     RaycastHit2D inRange;
+  
 
 
     // Start is called before the first frame update
@@ -23,6 +24,8 @@ public class AttackAI : MonoBehaviour
         if (inRange)
         {
             Debug.Log("Target In Range");
+            attack(attackTarget, 20);
+            Destroy(this.gameObject);
         }
     }
 
@@ -31,8 +34,10 @@ public class AttackAI : MonoBehaviour
 
     }
 
-    public void attack()
+    public void attack(GameObject target, int damage)
     {
-
+        PlayerInfo pInfo = (PlayerInfo)target.GetComponent("PlayerInfo");
+        pInfo.takeDamage(damage);
+        
     }
 }

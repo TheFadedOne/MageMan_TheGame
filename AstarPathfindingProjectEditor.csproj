@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{97C38AC3-A478-C68C-053D-7217DE46B419}</ProjectGuid>
+    <ProjectGuid>{B00970C1-CCE9-F788-95BA-83D6B20E01A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>AstarPathfindingProjectEditor</AssemblyName>
@@ -53,24 +53,27 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AstarPathfindingProject\Editor\SeekerEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\AILerpEditor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\GridGeneratorEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\ProceduralGridMoverEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\AstarPathEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\AstarUpdateChecker.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\GraphUpdateSceneEditor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\AstarUpdateWindow.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\PointGeneratorEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\GraphEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\SmoothModifierEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\GraphUpdateSceneEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\Legacy\LegacyAIPathEditor2.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\AnimationLinkEditor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\NavMeshGeneratorEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\Legacy\LegacyAIPathEditor2.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\CustomGraphEditorAttribute.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\RaycastModifierEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\SeekerEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\Legacy\LegacyEditorHelper2.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\AIBaseEditor.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Editor\AILerpEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\GraphEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\SmoothModifierEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\ProceduralGridMoverEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\PointGeneratorEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\ModifierEditors\RaycastModifierEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\Legacy\LegacyEditorHelper2.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\AstarPathEditor.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Editor\AstarUpdateChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AstarPathfindingProject\Editor\AstarPathfindingProjectEditor.asmdef" />
@@ -322,6 +325,9 @@
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
@@ -330,9 +336,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -706,11 +709,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{40B6EB98-CA16-BB31-89B6-45CD34181B1A}</Project>
+      <Project>{15DF4EED-F1AC-98A2-D2D5-D4B6011F6B69}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{D554C2C3-A987-A7BF-3398-EE72B2FA8B8F}</Project>
+      <Project>{8DE07965-A35D-15A1-5C55-BB1FC0705D87}</Project>
       <Name>PackageToolsEditor</Name>
     </ProjectReference>
   </ItemGroup>

@@ -6,9 +6,21 @@ using UnityEngine.UI;
 public class UpdateHP : MonoBehaviour
 {
     [SerializeField] Slider slider;
+    public Gradient gradient;
+    public Image fill;
 
-    public void setHealth(int value)
+    public void setHealth(int health)
     {
-        slider.value = value;
+        slider.value = health;
     }
+
+    public void setMaxHealth(int health)
+    {
+        slider.maxValue = health;
+        slider.value = health;
+
+        fill.color = gradient.Evaluate(1f);
+    }
+
+  
 }
